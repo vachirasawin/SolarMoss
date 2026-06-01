@@ -1,7 +1,8 @@
 import "./globals.css";
+import "leaflet/dist/leaflet.css";
 
 export const metadata = {
-  title: "Create Next App",
+  title: "SolarMoss",
   description: "Solar-Powered Moss Bio-Air Purifier for Sustainability",
 };
 

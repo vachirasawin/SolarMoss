@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import React, { useState } from "react"
-import Link from "next/link"
+import React, { useState } from "react";
+import Link from "next/link";
 
 function Navbar({ home, dashboard, faqs }) {
     const [menu, setMenu] = useState(false);
@@ -30,8 +30,8 @@ function Navbar({ home, dashboard, faqs }) {
                 </div>
             </div>
             
-            <div className = {`absolute ${menu ? "translate-y-24" : "-translate-y-full"} left-0 top-0 bg-neutral-50 w-screen h-[calc(100% - 6rem)] border-t border-gray-200 flex justify-center transition-transform duration-500 ease-in-out z-40 md:hidden`}>
-                <div className = "container bg-neutral-50 px-4 py-4 flex flex-col gap-4">
+            <div className = {`absolute ${menu ? "translate-y-24" : "-translate-y-full"} left-0 top-0 bg-neutral-50 w-screen h-[calc(100vh-6rem)] border-t border-gray-200 flex justify-center transition-transform duration-800 ease-in-out z-40 md:hidden`}>
+                <div className = "container px-4 py-4 flex flex-col gap-4">
                     <div className = "flex flex-col items-start gap-2 font-medium text-xs w-full">
                         <Link href = "/" className = {`${home ? "text-neutral-900 hover:underline hover:underline-offset-4" : "text-gray-400"} flex justify-start items-center h-10 w-full px-4 rounded-xl hover:bg-neutral-900 hover:text-neutral-50 hover:shadow-md duration-200`}>Home</Link>
                         <Link href = "/dashboard" className = {`${dashboard ? "text-neutral-900 hover:underline hover:underline-offset-4" : "text-gray-400"} flex justify-start items-center h-10 w-full px-4 rounded-xl hover:bg-neutral-900 hover:text-neutral-50 hover:shadow-md duration-200`}>Dashboard</Link>
