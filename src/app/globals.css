@@ -1,7 +1,40 @@
 @import "tailwindcss";
 
+@theme {
+  --breakpoint-xs: 35rem;
+  --breakpoint-xxs: 30rem;
+}
+
+html {
+  scroll-behavior: smooth; 
+}
+
 body {
   background: var(--color-neutral-50);
   color: var(--color-neutral-900);
   font-family: "Noto Sans Thai", Helvetica, sans-serif;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+.styleScrollbar {
+  margin-bottom: 8px;
+}
+.styleScrollbar::-webkit-scrollbar {
+  height: 6px;
+}
+.styleScrollbar::-webkit-scrollbar-thumb {
+  background-color: #9497a125;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #9497a150;
+  border-radius: 6px;
 }
