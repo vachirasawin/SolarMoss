@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
-function Footer({ home, dashboard, faqs }) {
+function Footer({ home, dashboard }) {
     const [quickLine, setQuickLink] = useState(false);
     const [information, setInformation] = useState(false);
     const [contactInfo, setContactInfo] = useState(false);
@@ -33,7 +33,7 @@ function Footer({ home, dashboard, faqs }) {
                             <div className = {`min-md:hidden ${information && "-rotate-90"} transition-transform duration-200 ease-in-out`}><i className = "fa-solid fa-angle-down"></i></div>
                         </div>
                         <div className = {`flex flex-col gap-2 max-md:${!information && "hidden"}`}>
-                            <Link href = "/faqs" className = {`${faqs ? "text-neutral-50" : "text-gray-400"} text-xs font-medium`}>FAQs</Link>
+                            <Link href = "/#faqs" className = {`${home ? "text-neutral-50" : "text-gray-400"} text-xs font-medium`}>FAQs</Link>
                         </div>
                     </div>
                     <div className = "flex flex-col gap-4 max-md:border-b border-neutral-200 max-md:pb-4">

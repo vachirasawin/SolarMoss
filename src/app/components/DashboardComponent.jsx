@@ -11,7 +11,7 @@ function DashboardComponent({ contents }) {
                             <p className = "font-bold text-xl uppercase">{content.title} </p>
                         </div>
                         <div className = "p-8 pr-6 max-sm:p-4 max-sm:pr-2 flex flex-col gap-4 w-full h-full relative z-10">
-                            <h3 className = "font-bold text-[#171717] text-xl">{content.title}</h3>
+                            <p className = "font-bold text-[#171717] text-xl">{content.title}</p>
                             <div className = "flex flex-col gap-2 overflow-y-auto styleScrollbar pr-2 w-full h-full">
                                 {content.values && content.values.map((item, index) => (
                                     <div key = {`${item.name} - ${index}`} className = "border border-gray-200 bg-neutral-50 backdrop-blur-[2px] rounded-xl w-full h-max">

@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import Infomation from "./components/Infomation";
 import Title from "./components/Title";
 const Map = dynamic(() => import("@/app/components/Map"), { ssr: false });
+import FAQsComponents from "./components/FAQsComponents";
 import Footer from "./components/Footer";
 
 function page() {
@@ -32,12 +33,36 @@ function page() {
     url: ``
   }
 
+  const faqsContent = [
+    {
+      question: "Lorem ipsum dolor sit amet.",
+      answer: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus."
+    }, 
+    {
+      question: "Lorem ipsum dolor sit amet.",
+      answer: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus."
+    }, 
+    {
+      question: "Lorem ipsum dolor sit amet.",
+      answer: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus."
+    }, 
+    {
+      question: "Lorem ipsum dolor sit amet.",
+      answer: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus."
+    }, 
+    {
+      question: "Lorem ipsum dolor sit amet.",
+      answer: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus."
+    }
+  ]
+
   return (
     <div>
       <Navbar home/>
       <Title contents = {titleContent}/>
       <Infomation contents = {informationContent}/>
       <Map position = {[13.625949305760146, 100.46904831312136]}/>
+      <FAQsComponents contents = {faqsContent}/>
       <Footer home/>
     </div>
   )
