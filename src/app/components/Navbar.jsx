@@ -15,9 +15,9 @@ function Navbar({ home, dashboard, faqs }) {
                         <span className = "text-[#014b49]">Moss</span>
                     </p>
                     <div className = "flex justify-center items-center w-max gap-8 font-medium text-sm max-md:hidden">
-                        <Link href = "/" className = {`${home ? "text-neutral-900 hover:underline hover:underline-offset-4" : "text-gray-400"} flex justify-center items-center h-10 px-4 rounded-xl hover:bg-neutral-900 hover:text-neutral-50 hover:shadow-md duration-200`}>Home</Link>
-                        <Link href = "/dashboard" className = {`${dashboard ? "text-neutral-900 hover:underline hover:underline-offset-4" : "text-gray-400"} flex justify-center items-center h-10 px-4 rounded-xl hover:bg-neutral-900 hover:text-neutral-50 hover:shadow-md duration-200`}>Dashboard</Link>
-                        <Link href = "/faqs" className = {`${faqs ? "text-neutral-900 hover:underline hover:underline-offset-4" : "text-gray-400"} flex justify-center items-center h-10 px-4 rounded-xl hover:bg-neutral-900 hover:text-neutral-50 hover:shadow-md duration-200`}>FAQs</Link>
+                        <Link href = "/" className = {`${home ? "text-neutral-900 hover:underline hover:underline-offset-4" : "text-gray-400"} flex justify-center items-center h-10 px-4 rounded-xl hover:bg-[#014b49] hover:text-neutral-50 hover:shadow-md duration-200`}>Home</Link>
+                        <Link href = "/dashboard" className = {`${dashboard ? "text-neutral-900 hover:underline hover:underline-offset-4" : "text-gray-400"} flex justify-center items-center h-10 px-4 rounded-xl hover:bg-[#014b49] hover:text-neutral-50 hover:shadow-md duration-200`}>Dashboard</Link>
+                        <Link href = "/faqs" className = {`${faqs ? "text-neutral-900 hover:underline hover:underline-offset-4" : "text-gray-400"} flex justify-center items-center h-10 px-4 rounded-xl hover:bg-[#014b49] hover:text-neutral-50 hover:shadow-md duration-200`}>FAQs</Link>
                     </div>
                     <Link href = "/#map" className = "flex justify-center items-center px-6 h-10 gap-2 bg-[#014b49] text-base text-neutral-50 font-semibold rounded-xl shadow-md border-2 border-[#014b49] hover:bg-neutral-50 hover:text-[#014b49] duration-200 max-md:hidden">
                         <i className = "fa-regular fa-map"></i>
@@ -32,9 +32,9 @@ function Navbar({ home, dashboard, faqs }) {
             <div className = {`absolute ${menu ? "translate-y-24" : "-translate-y-full"} left-0 top-0 bg-neutral-50 w-screen h-[calc(100vh-6rem)] border-t border-gray-200 flex justify-center transition-transform duration-800 ease-in-out z-40 md:hidden`}>
                 <div className = "container px-4 py-4 flex flex-col gap-4">
                     <div className = "flex flex-col items-start gap-2 font-medium text-xs w-full">
-                        <Link href = "/" className = {`${home ? "text-neutral-900 hover:underline hover:underline-offset-4" : "text-gray-400"} flex justify-start items-center h-10 w-full px-4 rounded-xl hover:bg-neutral-900 hover:text-neutral-50 hover:shadow-md duration-200`}>Home</Link>
-                        <Link href = "/dashboard" className = {`${dashboard ? "text-neutral-900 hover:underline hover:underline-offset-4" : "text-gray-400"} flex justify-start items-center h-10 w-full px-4 rounded-xl hover:bg-neutral-900 hover:text-neutral-50 hover:shadow-md duration-200`}>Dashboard</Link>
-                        <Link href = "/faqs" className = {`${faqs ? "text-neutral-900 hover:underline hover:underline-offset-4" : "text-gray-400"} flex justify-start items-center h-10 w-full px-4 rounded-xl hover:bg-neutral-900 hover:text-neutral-50 hover:shadow-md duration-200`}>FAQs</Link>
+                        <Link href = "/" className = {`${home ? "text-neutral-900" : "text-gray-400"} flex justify-start items-center h-10 w-full px-4 rounded-xl`}>Home</Link>
+                        <Link href = "/dashboard" className = {`${dashboard ? "text-neutral-900" : "text-gray-400"} flex justify-start items-center h-10 w-full px-4 rounded-xl`}>Dashboard</Link>
+                        <Link href = "/faqs" className = {`${faqs ? "text-neutral-900" : "text-gray-400"} flex justify-start items-center h-10 w-full px-4 rounded-xl`}>FAQs</Link>
                     </div>
                     <Link href = "/#map" className = "flex justify-center items-center px-6 h-10 gap-2 bg-[#014b49] text-sm text-neutral-50 font-semibold rounded-xl shadow-md border-2 border-[#014b49] hover:bg-neutral-50 hover:text-[#014b49] duration-200">
                         <i className = "fa-regular fa-map"></i>
