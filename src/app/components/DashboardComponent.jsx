@@ -13,17 +13,17 @@ function DashboardComponent({ contents }) {
                         <div className = "p-8 pr-6 max-sm:p-4 max-sm:pr-2 flex flex-col gap-4 w-full h-full relative z-10">
                             <p className = "font-bold text-[#171717] text-xl">{content.title}</p>
                             <div className = "flex flex-col gap-2 overflow-y-auto styleScrollbar pr-2 w-full h-full">
-                                {content.values && content.values.map((item, index) => (
-                                    <div key = {`${item.name} - ${index}`} className = "border border-gray-200 bg-neutral-50 backdrop-blur-[2px] rounded-xl w-full h-max">
-                                        <div className = "pr-[11px] flex justify-start items-center gap-4">
-                                            <div className = {`border-r border-gray-200 w-16 h-16 min-w-16 min-h-16 flex justify-center items-center rounded-l-xl aspect-square text-xl ${item.color}`}>
-                                                <i className = {item.icon}></i>
+                                {content.values && !content.values.some(item => item.value === "Loading...") && content.values.map((item, index) => (
+                                    <div key={`${item.name}-${index}`} className="border border-gray-200 bg-neutral-50 backdrop-blur-[2px] rounded-xl w-full h-max">
+                                        <div className="pr-[11px] flex justify-start items-center gap-4">
+                                            <div className={`border-r border-gray-200 w-16 h-16 min-w-16 min-h-16 flex justify-center items-center rounded-l-xl aspect-square text-xl ${item.color || ""}`}>
+                                                <i className={item.icon}></i>
                                             </div>
                                             <div>
-                                                <h1 className = "text-xl font-bold">{item.name}</h1>
-                                                <div className = "flex gap-2 items-center">
-                                                    <p className = "text-[#9497a1] text-xs font-medium">{item.value}</p>
-                                                    <p className = "text-[#9497a1] text-xs font-medium">{item.unit}</p>
+                                                <h1 className="text-xl font-bold">{item.name}</h1>
+                                                <div className="flex gap-2 items-center">
+                                                    <p className="text-[#9497a1] text-xs font-medium">{item.value}</p>
+                                                    <p className="text-[#9497a1] text-xs font-medium">{item.unit}</p>
                                                 </div>
                                             </div>
                                         </div>

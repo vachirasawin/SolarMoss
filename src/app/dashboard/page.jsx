@@ -5,40 +5,33 @@ import dynamic from "next/dynamic";
 
 import Navbar from "../components/Navbar";
 const Map = dynamic(() => import("@/app/components/Map"), { ssr: false });
+import { useESP32 } from "../hooks/useESP32";
 import DashboardComponent from "../components/DashboardComponent";
 import Footer from "../components/Footer";
 
 function page() {
+  const { data, isConnected, error, reconnect } = useESP32();
+  
+  const dust = data?.dustDensity !== undefined ? data.dustDensity.toFixed(2) : "Loading...";
+  const temp = data?.temperature !== undefined ? data.temperature.toFixed(2) : "Loading...";
+  const humid = data?.humidity !== undefined ? data.humidity.toFixed(2) : "Loading...";
+
   const mapContent = [
     {
-      name: "SKT",
-      icon: "fa-solid fa-location-dot",
-      value: "XX.XX",
+      name: "Duct Density",
+      icon: "fa-solid fa-smog",
+      value: dust,
       unit: "µg/m³"
-    },
-    {
-      name: "SKT",
-      icon: "fa-solid fa-location-dot",
-      value: "XX.XX",
-      unit: "µg/m³"
-    },
-    {
-      name: "SKT",
-      icon: "fa-solid fa-location-dot",
-      value: "XX.XX",
-      unit: "µg/m³"
-    },
-    {
-      name: "SKT",
-      icon: "fa-solid fa-location-dot",
-      value: "XX.XX",
-      unit: "µg/m³"
-    },
-    {
-      name: "SKT",
-      icon: "fa-solid fa-location-dot",
-      value: "XX.XX",
-      unit: "µg/m³"
+    }, {
+      name: "Temperature",
+      icon: "fa-solid fa-temperature-high",
+      value: temp,
+      unit: "°C"
+    }, {
+      name: "Humidity",
+      icon: "fa-solid fa-droplet",
+      value: humid,
+      unit: "%"
     }
   ];
 
