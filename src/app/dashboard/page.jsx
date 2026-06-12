@@ -12,9 +12,9 @@ import Footer from "../components/Footer";
 function page() {
   const { data, isConnected, error, reconnect } = useESP32();
   
-  const dust = data?.dustDensity !== undefined ? data.dustDensity.toFixed(2) : "Loading...";
-  const temp = data?.temperature !== undefined ? data.temperature.toFixed(2) : "Loading...";
-  const humid = data?.humidity !== undefined ? data.humidity.toFixed(2) : "Loading...";
+  const dust = data?.dustDensity !== undefined ? data.dustDensity.toFixed(2) : null;
+  const temp = data?.temperature !== undefined ? data.temperature.toFixed(2) : null;
+  const humid = data?.humidity !== undefined ? data.humidity.toFixed(2) : null;
 
   const mapContent = [
     {
@@ -37,7 +37,7 @@ function page() {
 
   const content = [
     {
-      title: "SolarMoss Map",
+      title: "Suankularb Wittayalai Thonburi School",
       icon: "fa-regular fa-map",
       values: mapContent
     }
@@ -46,7 +46,7 @@ function page() {
   return (
     <div>
       <Navbar dashboard/>
-      <Map position = {[13.625949305760146, 100.46904831312136]}/>
+      <Map position = {[13.625949305760146, 100.46904831312136]} dustValue = {dust} tempValue = {temp} humidValue = {humid} title = "Suankularb Wittayalai Thonburi School"/>
       <DashboardComponent contents = {content}/>
       <Footer dashboard/>
     </div>

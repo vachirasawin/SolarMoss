@@ -43,6 +43,9 @@ function Footer({ home, dashboard }) {
                         </div>
                         <div className = {`flex flex-col gap-2 max-md:${!contactInfo && "hidden"}`}>
                             <div className = "text-neutral-400 text-xs font-medium">vachirasawin.mah@gmail.com</div>
+                            <div className = "text-neutral-400 text-xs font-medium">pemikangernaiem@gmail.com</div>
+                            <div className = "text-neutral-400 text-xs font-medium">lapasradakanghae@gmail.com</div>
+                            <div className = "text-neutral-400 text-xs font-medium">waeasraf.weas@sk-thonburi.ac.th</div>
                         </div>
                     </div>
                 </div>

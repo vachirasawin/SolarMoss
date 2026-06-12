@@ -7,10 +7,17 @@ import Navbar from "./components/Navbar";
 import Infomation from "./components/Infomation";
 import Title from "./components/Title";
 const Map = dynamic(() => import("@/app/components/Map"), { ssr: false });
+import { useESP32 } from "./hooks/useESP32";
 import FAQsComponents from "./components/FAQsComponents";
 import Footer from "./components/Footer";
 
 function page() {
+  const { data, isConnected, error, reconnect } = useESP32();
+
+  const dust = data?.dustDensity !== undefined ? data.dustDensity.toFixed(2) : null;
+  const temp = data?.temperature !== undefined ? data.temperature.toFixed(2) : null;
+  const humid = data?.humidity !== undefined ? data.humidity.toFixed(2) : null;
+
   const informationContent = {
     title: `<span class = "text-[#b2bb1e]">Solar</span><span class = "text-[#014b49]">Moss</span><span>&nbsp;Map</span>`,
     description: `เครื่องฟอกอากาศชีวภาพจากมอสส์ด้วยระบบพลังงานแสงอาทิตย์เพื่อความยั่งยืน`,
@@ -61,7 +68,7 @@ function page() {
       <Navbar home/>
       <Title contents = {titleContent}/>
       <Infomation contents = {informationContent}/>
-      <Map position = {[13.625949305760146, 100.46904831312136]}/>
+      <Map position = {[13.625949305760146, 100.46904831312136]} dustValue = {dust} tempValue = {temp} humidValue = {humid} title = "Suankularb Wittayalai Thonburi School"/>
       <FAQsComponents contents = {faqsContent}/>
       <Footer home/>
     </div>
