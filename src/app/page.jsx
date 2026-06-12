@@ -22,7 +22,10 @@ function page() {
     title: `<span class = "text-[#b2bb1e]">Solar</span><span class = "text-[#014b49]">Moss</span><span>&nbsp;Map</span>`,
     description: `เครื่องฟอกอากาศชีวภาพจากมอสส์ด้วยระบบพลังงานแสงอาทิตย์เพื่อความยั่งยืน`,
     content: [
-      `<p>Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi pretium tellus duis convallis tempus leo eu aenean sed diam urna tempor pulvinar vivamus fringilla lacus nec metus bibendum egestas iaculis massa nisl malesuada lacinia integer nunc posuere ut hendrerit semper vel class aptent.</p>`
+      `
+        <p>บริเวณจุดจอดรถโดยสารประจำทางเป็นพื้นที่ ที่มีความหนาแน่นของมลพิษทางอากาศจากยานพาหนะสูงเป็นพิเศษ และมีอุณหภูมิสูง ซึ่งส่งผลกระทบในระยะยาวที่อาจก่อให้เกิดอันตรายร้ายแรงต่อผู้โดยสารที่พักคอยเป็นประจำ แม้ในปัจจุบันจะมีการติดตั้งพัดลมพ่นไอน้ำในบางพื้นที่ แต่ส่วนใหญ่มักมีข้อจำกัดด้านการใช้พลังงานไฟฟ้าที่สิ้นเปลือง และมีประสิทธิภาพในการดักจับฝุ่นละอองได้น้อย</p>
+        <p>พวกเราจึงเล็งเห็นในความสำคัญของการนำมอสส์มาใช้เป็นตัวกรองอากาศชีวภาพ ซึ่งสามารถย่อยสลายได้เอง และมีการติดตั้งระบบโซลาร์เซลล์ จึงได้เป็นนวัตกรรมเครื่องฟอกอากาศชีวภาพจากมอสส์ด้วยระบบพลังงานแสงอาทิตย์เพื่อความยั่งยืน</p>
+      `
     ],
     links: [
       {

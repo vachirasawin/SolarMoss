@@ -22,16 +22,6 @@ function page() {
       icon: "fa-solid fa-smog",
       value: dust,
       unit: "µg/m³"
-    }, {
-      name: "Temperature",
-      icon: "fa-solid fa-temperature-high",
-      value: temp,
-      unit: "°C"
-    }, {
-      name: "Humidity",
-      icon: "fa-solid fa-droplet",
-      value: humid,
-      unit: "%"
     }
   ];
 

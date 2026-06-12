@@ -32,7 +32,7 @@ function DashboardComponent({ contents }) {
                 </div>
                 <div className = "w-full flex flex-wrap justify-center gap-4">
                     {contents.map((content, index) => (
-                        <div className = "flex flex-col h-96 w-[20rem] max-sm:w-full border border-gray-200 rounded-xl shadow-md relative" key = {`${content.title} - ${index}`}>
+                        <div className = "flex flex-col h-64 w-[20rem] max-sm:w-full border border-gray-200 rounded-xl shadow-md relative" key = {`${content.title} - ${index}`}>
                             <div className = "absolute inset-0 flex flex-col justify-center items-center text-neutral-200 gap-2 pointer-events-none select-none z-0">
                                 <i className = {`text-7xl ${content.icon}`}></i>
                                 <p className = "font-bold text-xl uppercase text-center">{content.title} </p>

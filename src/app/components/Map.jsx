@@ -57,8 +57,6 @@ function Map({ position, dustValue, tempValue, humidValue, title }) {
                             <hr className = "border-gray-200"/>
                             <div>
                               <p>{dustValue || "Loading..."} µg/m³</p>
-                              <p>{tempValue || "Loading..."} °C</p>
-                              <p>{humidValue || "Loading..."} %</p>
                             </div>
                           </div>
                         </Popup>
